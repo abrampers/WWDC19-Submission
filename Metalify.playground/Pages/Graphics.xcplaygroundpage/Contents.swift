@@ -50,12 +50,12 @@ Let's define all 8 vertices for the cube.
 - experiment: Try to change the color of the vertices or move the vertices around (The cube may look deformed if you choose to move the vertices)
  */
         let vertex_data: [Vertex] = [
-            Vertex(pos: [-1.0, -1.0,  1.0, 1.0], col: [1, 0, 0, 1]),
-            Vertex(pos: [ 1.0, -1.0,  1.0, 1.0], col: [0, 1, 0, 1]),
-            Vertex(pos: [ 1.0,  1.0,  1.0, 1.0], col: [0, 0, 1, 1]),
-            Vertex(pos: [-1.0,  1.0,  1.0, 1.0], col: [1, 1, 1, 1]),
+            Vertex(pos: [-1.0, -1.0,  1.0, 1.0], col: [1, 1, 0, 1]),
+            Vertex(pos: [ 1.0, -1.0,  1.0, 1.0], col: [0, 1, 1, 1]),
+            Vertex(pos: [ 1.0,  1.0,  1.0, 1.0], col: [1, 0, 1, 1]),
+            Vertex(pos: [-1.0,  1.0,  1.0, 1.0], col: [0, 1, 1, 1]),
             Vertex(pos: [-1.0, -1.0, -1.0, 1.0], col: [0, 0, 1, 1]),
-            Vertex(pos: [ 1.0, -1.0, -1.0, 1.0], col: [1, 1, 1, 1]),
+            Vertex(pos: [ 1.0, -1.0, -1.0, 1.0], col: [0, 1, 1, 1]),
             Vertex(pos: [ 1.0,  1.0, -1.0, 1.0], col: [1, 0, 0, 1]),
             Vertex(pos: [-1.0,  1.0, -1.0, 1.0], col: [0, 1, 0, 1])
         ]

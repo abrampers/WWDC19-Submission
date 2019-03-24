@@ -65,9 +65,10 @@ We start by creating our data in the CPU just like below.
          
 - experiment: Try to tweak the vertices and see how it'll affect the triangle. Be creative, change it to your favorite color and put the triangle in the most awkward position you can get!
 */
-        let vertex_data: [Vertex] = [Vertex(pos: [-0.5, -0.5, 0.0, 1.0], col: [1, 0, 0, 1]),
-                                     Vertex(pos: [ 0.5, -0.5, 0.0, 1.0], col: [0, 1, 0, 1]),
-                                     Vertex(pos: [ 0.0,  0.5, 0.0, 1.0], col: [0, 0, 1, 1])]
+        let vertex_data: [Vertex] = [
+            Vertex(pos: [-0.5, -0.5, 0.0, 1.0], col: [1, 0, 1, 1]),
+            Vertex(pos: [ 0.5, -0.5, 0.0, 1.0], col: [1, 1, 0, 1]),
+            Vertex(pos: [ 0.0,  0.5, 0.0, 1.0], col: [0, 1, 1, 1])]
 /*:
  After that, we create a `buffer` place where we can put data in the GPU.
  In creating the new home for our data, we have to specify how much space do we need to put our data.

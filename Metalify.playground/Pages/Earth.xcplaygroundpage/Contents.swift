@@ -41,7 +41,7 @@ public class MetalView: MTKView {
         queue = device!.makeCommandQueue()
         registerShaders()
 /*:
-- experiment: Try to change the parameter of setUpTexture into one of below: \
+- experiment: Try to change the parameter of `setUpTexture` into one of below: \
 `.jupiter`\
 `.mars`\
 `.mercury`\

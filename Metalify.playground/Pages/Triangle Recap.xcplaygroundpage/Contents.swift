@@ -1,6 +1,8 @@
 /*:
  # Quick Recap!
  
+ - note: There's no runnable code here, so don't bother to run.
+ 
  We've covered a lot of new and fancy things in our previous section. There are many concept that are pretty hard to grasp, it's normal, you're not alone in this.
  
  In the previous section, we met a few new terms such as:

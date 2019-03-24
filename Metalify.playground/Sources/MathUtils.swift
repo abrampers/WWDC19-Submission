@@ -3,7 +3,7 @@ import simd
 public struct Vertex {
     var position: vector_float4
     var color: vector_float4
-    init(pos: vector_float4, col: vector_float4) {
+    public init(pos: vector_float4, col: vector_float4) {
         position = pos
         color = col
     }
@@ -11,9 +11,12 @@ public struct Vertex {
 
 public struct Uniforms {
     var modelViewProjectionMatrix: matrix_float4x4
+    public init(modelViewProjectionMatrix: matrix_float4x4) {
+        self.modelViewProjectionMatrix = modelViewProjectionMatrix
+    }
 }
 
-func translationMatrix(position: float3) -> matrix_float4x4 {
+public func translationMatrix(position: float3) -> matrix_float4x4 {
     let X = vector_float4(1, 0, 0, 0)
     let Y = vector_float4(0, 1, 0, 0)
     let Z = vector_float4(0, 0, 1, 0)
@@ -21,7 +24,7 @@ func translationMatrix(position: float3) -> matrix_float4x4 {
     return matrix_float4x4(columns:(X, Y, Z, W))
 }
 
-func scalingMatrix(scale: Float) -> matrix_float4x4 {
+public func scalingMatrix(scale: Float) -> matrix_float4x4 {
     let X = vector_float4(scale, 0, 0, 0)
     let Y = vector_float4(0, scale, 0, 0)
     let Z = vector_float4(0, 0, scale, 0)
@@ -29,7 +32,7 @@ func scalingMatrix(scale: Float) -> matrix_float4x4 {
     return matrix_float4x4(columns:(X, Y, Z, W))
 }
 
-func rotationMatrix(angle: Float, axis: vector_float3) -> matrix_float4x4 {
+public func rotationMatrix(angle: Float, axis: vector_float3) -> matrix_float4x4 {
     var X = vector_float4(0, 0, 0, 0)
     X.x = axis.x * axis.x + (1 - axis.x * axis.x) * cos(angle)
     X.y = axis.x * axis.y * (1 - cos(angle)) - axis.z * sin(angle)
@@ -49,7 +52,7 @@ func rotationMatrix(angle: Float, axis: vector_float3) -> matrix_float4x4 {
     return matrix_float4x4(columns:(X, Y, Z, W))
 }
 
-func viewMatrix() -> matrix_float4x4 {
+public func viewMatrix() -> matrix_float4x4 {
     let cameraPosition = vector_float3(0, 0, -3)
     return translationMatrix(position: cameraPosition)
 }

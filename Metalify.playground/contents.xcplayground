@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='macos' display-mode='rendered' executeOnSourceChanges='false'>
+    <pages>
+        <page name='Intro'/>
+        <page name='Metal'/>
+        <page name='Triangle'/>
+        <page name='Triangle Recap'/>
+        <page name='Graphics'/>
+        <page name='Compute'/>
+        <page name='Sphere'/>
+        <page name='Earth'/>
+    </pages>
+</playground>
